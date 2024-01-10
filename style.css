@@ -1,0 +1,155 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+.navbar{
+    border-bottom: 1px solid #ccc;
+    height: 80px;
+    width: 100%;
+    color: black;
+}
+.logo{
+    line-height: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 80px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 25px;
+}
+.navbar ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.navbar ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.active, a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FB803C;
+    text-decoration-thickness: 2px;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 22px;
+    color: black;
+    line-height: 80px;
+    float: right;
+    display: none;
+    margin-right: 30px;
+}
+#check{
+    display: none;
+}
+
+
+.intro{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    height: contain;
+    border-bottom: 1px solid #ccc;
+}
+.intro .text{
+    width: 50%;
+    font-size: 20px;
+    margin: 10px 50px 10px 40px;
+}
+.intro .img{
+    background: #FB803C;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.text button{
+    color: white;
+    font-size: 18px;
+    background: #FB803C;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    font-weight: medium;
+    padding: 6px 8px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.text button:hover{
+    background: transparent;
+    border: 1px solid #FB803C;
+    color: black;
+}
+
+
+@media (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 50px;
+}
+@media (max-width: 858px){
+    .navbar{
+        height: 50px;
+    }
+    .logo{
+        font-size: 30px;
+        padding-left: 40px;
+        line-height: 50px;
+    }
+    .navbar ul{
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 50px;
+        background: #FFFFFF;
+        transition: all .5s;
+        left: -100%;
+        line-height: 50px;
+        border: 1px solid #ccc;
+    }
+    .navbar ul li{
+        display: block;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        text-decoration: underlined;
+        text-decoration-color: #FFB288;
+        text-decoration-thickness: 2px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .checkbtn{
+        line-height: 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    /*.intro{
+        flex-wrap: wrap;
+    }*/
+    .intro .text{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+        margin: 220px 10px 10px 10px;
+    }
+    .intro .img{
+        display: none;
+    }
+}
