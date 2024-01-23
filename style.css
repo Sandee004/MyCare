@@ -56,7 +56,6 @@ a.active, a:hover{
     display: none;
 }
 
-
 .intro{
     display: flex;
     width: 100%;
@@ -74,8 +73,9 @@ a.active, a:hover{
     height: 300px;
     width: 300px;
     border-radius: 50%;
+    margin-bottom: 50px;
 }
-.text button{
+.text button, .txt button{
     color: white;
     font-size: 18px;
     background: #FB803C;
@@ -87,18 +87,174 @@ a.active, a:hover{
     margin: 10px auto;
     cursor: pointer;
 }
-.text button:hover{
+.text button:hover, .txt button:hover{
     background: transparent;
     border: 1px solid #FB803C;
     color: black;
 }
 
+.features{
+    background: ghostwhite;
+    height: contain;
+    width: 100%;
+    text-align: center;
+    color: black;
+    border-bottom: 1px solid #ccc;
+}
+.features h1, .testimonials h1{
+    padding-top: 50px;
+    text-align: center;
+}
+.features .top-txt, .testimonials .top-txt{
+    color: #FB803C;
+    font-size: 18px;
+    text-align: center;
+}
+.boxes{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    padding-bottom: 80px;
+}
+.img1, .img2, .img3{
+    width: 80px;
+    height: 100px;
+    background: #FB803C;
+    border-radius: 5px;
+    margin: auto;
+}
+figcaption{
+    font-weight: bold;
+}
+.side p{
+    font-size: 12px;
+}
 
+.about{
+    width: 100%;
+    height: contain;
+    border-bottom: 1px splid #ccc;
+}
+.about-grp{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 40px;
+}
+.about-grp .txt{
+    width: 65%;
+}
+.txt button{
+    margin-bottom: 50px;
+}
+.about h1{
+    margin: 50px auto 30px;
+    text-align: center;
+}
+.img4{
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    background: #FB803C;
+    margin: auto 20px;
+}
+
+.testimonials{
+    height: contain;
+    width: 100%;
+    background: ghostwhite;
+    border-bottom: 1px solid #ccc;
+}
+.testimonials .top-text{
+    text-align: center;
+    margin: 10px auto 30px;
+}
+.testimonials-grp{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 40px 50px;
+}
+.testimonials-grp .box{
+    height: 280px;
+    width: 280px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+}
+.img5{
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background: #FB803C;
+    position: absolute;
+    margin: -60px 20px;
+}
+.box .text{
+    margin: 15px 8px;
+}
+.box .text h2{
+    text-align: right;
+    margin: auto 40px 15px auto;
+}
+.rating{
+    font-weight: bold;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+.fa-star{
+    color: orange;
+}
+
+.FAQ{
+    height: contain;
+    width: 100%;
+    text-align: center;
+}
+.FAQ-grp{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin: auto 35px;
+    border: 1px solid #ccc;
+}
+.img6{
+    width: 30%;
+    height: 100%;
+    background: #FB803C;
+    border-radius: 5px;
+}
+.questions-grp{
+    width: 70%;
+}
+.question {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.question h3 {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 0;
+}
+.answer {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.answer p {
+    margin: 0;
+}
+
+.active {
+    display: block;
+}
 @media (max-width: 952px){
     .logo{
         font-size: 30px;
         padding-left: 50px;
 }
+
+    
 @media (max-width: 858px){
     .navbar{
         height: 50px;
@@ -140,16 +296,75 @@ a.active, a:hover{
     .checkbtn{
         display: block;
     }
-    /*.intro{
-        flex-wrap: wrap;
-    }*/
     .intro .text{
         width: 100%;
         text-align: center;
         margin-top: 50px;
-        margin: 220px 10px 10px 10px;
+        margin: 220px 20px 10px 20px;
     }
     .intro .img{
+        display: none;
+    }
+    .features{
+        height: 100vh;
+    }
+    .features .boxes{
+        flex-direction: column;
+    }
+    .grp{
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .img2{
+        order: 2;
+    }
+    .grp figcaption{
+        display: none;
+    }
+    .grp .side{
+        margin: auto;
+    }
+    .side p{
+        font-size: 18px;
+    }
+    .about{
+        height: 90vh;
+    }
+    .about-grp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto 2px;
+    }
+    .about-grp .txt{
+        width: 90%;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .img4{
+        order: -1;
+    }
+    .testimonials-grp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonials-grp .box{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 80px;
+        border: 1px solid #ccc;
+    }
+    .img5{
+        margin: -60px 70px;
+    }
+    .box .text{
+        margin-top: 60px;
+    }
+    .box .text h2{
+        display: none;
+    }
+    .questions-grp .hide{
         display: none;
     }
 }
